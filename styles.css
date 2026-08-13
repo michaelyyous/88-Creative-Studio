@@ -157,43 +157,47 @@ img { max-width: 100%; display: block; }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.82) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.65) 100%);
+  pointer-events: none;
 }
 
 .hero-fullbleed .wrap {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding-bottom: 56px;
+  padding-bottom: 48px;
   padding-top: 120px;
 }
 
 .hero-fullbleed .eyebrow {
   background: rgba(255,255,255,0.12);
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.3);
+  mix-blend-mode: difference;
 }
 
 .hero-fullbleed .mark {
-  font-size: clamp(52px, 9vw, 148px);
+  font-size: clamp(64px, 11.5vw, 200px);
   font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 0.92;
+  letter-spacing: -0.03em;
+  line-height: 0.86;
   color: #fff;
-  margin: 18px 0 20px;
+  mix-blend-mode: difference;
+  margin: 14px 0 22px;
   text-transform: uppercase;
 }
 
 .hero-fullbleed .mark em {
   font-style: normal;
-  color: var(--accent);
+  color: #fff;
 }
 
 .hero-fullbleed p.lead {
-  color: rgba(255,255,255,0.82);
+  color: #fff;
   font-size: 18px;
   max-width: 56ch;
   margin: 0 0 32px;
+  text-shadow: 0 1px 12px rgba(0,0,0,0.35);
 }
 
 .btn-outline-light {
