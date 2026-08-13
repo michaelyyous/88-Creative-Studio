@@ -126,6 +126,60 @@ img { max-width: 100%; display: block; }
 .nav-toggle span::before { top: -7px; }
 .nav-toggle span::after { top: 7px; }
 
+/* ---------- Transparent / see-through header ---------- */
+
+.site-header.transparent-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  border-bottom: none;
+}
+
+.site-header.transparent-header .logo,
+.site-header.transparent-header .main-nav a {
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.site-header.transparent-header .logo span { color: #fff; }
+
+.site-header.transparent-header .main-nav a {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border-bottom: none;
+  transition: background 0.2s ease;
+}
+
+.site-header.transparent-header .main-nav a:hover,
+.site-header.transparent-header .main-nav a.active {
+  background: rgba(255,255,255,0.22);
+  color: #fff;
+}
+
+.site-header.transparent-header .nav-toggle span,
+.site-header.transparent-header .nav-toggle span::before,
+.site-header.transparent-header .nav-toggle span::after {
+  background: #fff;
+  mix-blend-mode: difference;
+}
+
+.site-header.transparent-header.open {
+  background: var(--paper);
+}
+.site-header.transparent-header.open .logo,
+.site-header.transparent-header.open .main-nav a {
+  color: var(--ink);
+  mix-blend-mode: normal;
+}
+.site-header.transparent-header.open .nav-toggle span,
+.site-header.transparent-header.open .nav-toggle span::before,
+.site-header.transparent-header.open .nav-toggle span::after {
+  background: var(--ink);
+  mix-blend-mode: normal;
+}
+
 /* ---------- Hero ---------- */
 
 .hero {
@@ -137,7 +191,7 @@ img { max-width: 100%; display: block; }
 
 .hero-fullbleed {
   position: relative;
-  min-height: 88vh;
+  min-height: 100vh;
   display: flex;
   align-items: flex-end;
   background: var(--ink);
