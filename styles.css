@@ -204,7 +204,8 @@ img { max-width: 100%; display: block; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center 25%;
+  filter: grayscale(1) contrast(1.08) brightness(0.95);
 }
 
 .hero-fullbleed::after {
