@@ -169,6 +169,72 @@ img { max-width: 100%; display: block; }
 
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
+/* ---------- Hero / page-hero split with image ---------- */
+
+.hero-split {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.hero-media {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--paper-soft);
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-media.dark img { filter: grayscale(0.15); }
+
+.hero-media .media-caption {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.45);
+  padding: 6px 12px;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+
+.page-hero .hero-split { align-items: center; }
+.page-hero .hero-media { aspect-ratio: 16 / 10; }
+
+@media (max-width: 900px) {
+  .hero-split { grid-template-columns: 1fr; gap: 32px; }
+  .hero-media { aspect-ratio: 16 / 11; order: -1; }
+}
+
+/* ---------- Founder avatar ---------- */
+
+.founder-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+
 /* ---------- Buttons ---------- */
 
 .btn {
